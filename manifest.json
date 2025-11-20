@@ -1,0 +1,17 @@
+{
+  "name": "PW Tools",
+  "description": "Custom speed, bulk downloads, and auto completion.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://www.pw.live/*"]
+    }
+  ]
+}

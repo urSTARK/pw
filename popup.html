@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: 'Ubuntu Sans', Tahoma, sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+        padding: 15px;
+        width: 250px;
+      }
+
+      h1 {
+        margin-bottom: 12px;
+        color: #333;
+        text-align: center;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 8px 10px;
+        margin: 8px 0;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 6px;
+        background: #0078d4;
+        color: white;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      button span {
+        margin-right: 6px;
+      }
+
+      button:hover {
+        background: #005a9e;
+      }
+
+      button:active {
+        background: #004578;
+      }
+
+      #speed-control {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+
+      #speed-input {
+        width: 70px;
+        padding: 4px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        text-align: center;
+        line-height: 1.2;
+        height: 32px;
+        box-sizing: border-box;
+      }
+
+      #set-speed {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #28a745;
+        height: 32px;
+      }
+
+      #set-speed:hover {
+        background: #218838;
+      }
+
+      #set-speed:active {
+        background: #1e7e34;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PW Tools</h1>
+    <button
+      id="mark-complete"
+      title="Toggle completion status for all lectures in the current page"
+    >
+      ✅ Toggle Completion
+    </button>
+    <button
+      id="download-pdfs"
+      title="Download lecture PDFs for all lectures in the current page"
+    >
+      📥 Download PDFs
+    </button>
+    <div id="speed-control">
+      <input
+        id="speed-input"
+        type="number"
+        step="0.1"
+        value="1.0"
+        min="0"
+        max="16"
+      />
+      <button
+        id="set-speed"
+        title="Change playback speed for the lecture in the current tab"
+      >
+        ⚡ Set Speed
+      </button>
+    </div>
+    <button id="old-ui" title="Opens the old website interface">⏲ Redirect to old UI</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
